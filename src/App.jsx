@@ -21,6 +21,7 @@ function App() {
         onLogin={lms.handleLogin}
         onRegister={lms.handleRegister}
         clearErrors={lms.clearErrors}
+        onFetchUsers={lms.fetchUsers}
       />
     );
   }

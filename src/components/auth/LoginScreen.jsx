@@ -8,7 +8,8 @@ export const LoginScreen = ({
   regError = "",
   onLogin,
   onRegister,
-  clearErrors
+  clearErrors,
+  onFetchUsers
 }) => {
   const [isRegisterMode, setIsRegisterMode] = useState(false);
   const [emailInput, setEmailInput] = useState("");
@@ -56,6 +57,9 @@ export const LoginScreen = ({
   const toggleMode = (register) => {
     setIsRegisterMode(register);
     clearErrors();
+    if (register && onFetchUsers) {
+      onFetchUsers();
+    }
   };
 
   return (
