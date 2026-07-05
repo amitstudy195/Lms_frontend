@@ -337,7 +337,7 @@ export const LearnerDashboard = ({
                           </div>
                           <button
                             onClick={() => setActiveCourseId(course._id)}
-                            className="w-full py-1.5 bg-slate-50 text-slate-950 hover:bg-indigo-650 hover:text-white dark:bg-slate-950 dark:hover:bg-indigo-650 border border-slate-200 dark:border-slate-800 rounded-xl text-[10px] font-bold transition-all"
+                            className="w-full py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-[10px] font-bold shadow-sm transition-all"
                           >
                             {course.progress === 0 ? "Start Learning" : "Resume Learning"}
                           </button>
