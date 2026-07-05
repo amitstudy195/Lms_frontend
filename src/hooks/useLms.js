@@ -102,7 +102,16 @@ export const useLms = () => {
 
   const fetchUsers = () => {
     fetch("/api/users")
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP status ${res.status}`);
+        }
+        const contentType = res.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+          throw new TypeError("Response is not JSON format");
+        }
+        return res.json();
+      })
       .then((resData) => {
         setUsers(resData.data || []);
       })

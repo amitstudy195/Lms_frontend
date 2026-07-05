@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://lms-backend-mpdh.onrender.com/api/:path*"
+    }
+  ]
+}
