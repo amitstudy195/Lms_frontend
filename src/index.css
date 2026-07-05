@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  /* Custom Corporate Slate scale */
+  --color-slate-150: #eef2f6;
+  --color-slate-350: #b8c4d3;
+  --color-slate-450: #7e8f9f;
+  --color-slate-550: #52627a;
+  --color-slate-750: #273549;
+  --color-slate-850: #152033;
+
+  /* Custom Corporate Indigo scale */
+  --color-indigo-650: #4338ca;
+  --color-indigo-705: #3730a3;
+
+  /* Custom Corporate Amber scale */
+  --color-amber-250: #fde047;
+  --color-amber-550: #d97706;
+
+  /* Custom Animations & Keyframes */
+  --animate-fadeIn: fadeIn 0.3s ease-in-out;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
