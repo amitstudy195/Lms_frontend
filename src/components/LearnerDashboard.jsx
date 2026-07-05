@@ -83,7 +83,7 @@ export const LearnerDashboard = ({
   return (
     <div className="space-y-8">
       {/* Hero Greeting & Stats */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 to-slate-850 dark:from-slate-955 dark:to-slate-900 rounded-3xl p-6 sm:p-8 text-white shadow-lg">
+      <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 to-slate-850 dark:from-slate-950 dark:to-slate-900 rounded-3xl p-6 sm:p-8 text-white shadow-lg">
         <div className="absolute right-0 top-0 -mt-20 -mr-20 h-80 w-80 rounded-full bg-indigo-500/10 blur-[100px] pointer-events-none"></div>
         
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
@@ -248,7 +248,7 @@ export const LearnerDashboard = ({
                     <div className={`p-4 rounded-2xl border text-xs font-semibold ${
                       quizSubmittedResult.success 
                         ? "bg-emerald-50 dark:bg-emerald-950/20 border-emerald-200 dark:border-emerald-900/50 text-emerald-605" 
-                        : "bg-red-50 dark:bg-red-955/20 border-red-200 dark:border-red-900/50 text-red-650"
+                        : "bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-900/50 text-red-650"
                     }`}>
                       {quizSubmittedResult.success 
                         ? `🎉 Congratulations! You scored ${quizSubmittedResult.score}%. Course compliance completed!` 
@@ -352,7 +352,7 @@ export const LearnerDashboard = ({
               <div className="space-y-4">
                 <h3 className="text-sm font-bold tracking-tight text-slate-900 dark:text-white">Recommended for Career Growth</h3>
                 {filterList(recommendedList).length === 0 ? (
-                  <p className="text-xs text-slate-505 py-6 text-center bg-white dark:bg-slate-900 border border-slate-150 dark:border-slate-855 rounded-3xl italic">
+                  <p className="text-xs text-slate-505 py-6 text-center bg-white dark:bg-slate-900 border border-slate-150 dark:border-slate-850 rounded-3xl italic">
                     All courses registered in the department are currently active in your dashboard.
                   </p>
                 ) : (
@@ -364,13 +364,13 @@ export const LearnerDashboard = ({
                             <span className={`px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300`}>
                               {course.category}
                             </span>
-                            <span className="text-[10px] text-slate-455 capitalize">{course.level}</span>
+                            <span className="text-[10px] text-slate-450 capitalize">{course.level}</span>
                           </div>
                           <h4 className="text-xs font-extrabold text-slate-850 dark:text-slate-150 group-hover:text-indigo-650 dark:group-hover:text-indigo-400 transition-colors line-clamp-1">{course.title}</h4>
                           <p className="text-[10px] text-slate-500 line-clamp-2">{course.description}</p>
                         </div>
                         <div className="flex justify-between items-center gap-4 pt-2">
-                          <span className="text-[10px] font-bold text-slate-455">{course.modules?.length || 0} Lessons &bull; Quiz</span>
+                          <span className="text-[10px] font-bold text-slate-450">{course.modules?.length || 0} Lessons &bull; Quiz</span>
                           <button
                             onClick={() => handleEnroll(course._id)}
                             className="px-4 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-[10px] font-bold shadow-sm transition-all"
